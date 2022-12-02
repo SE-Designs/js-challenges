@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <h1>Password Generator</h1>
+    <div class="container row">
+      <input
+        type="text"
+        name="result"
+        id="result"
+        placeholder="Result will be here"
+      />
+      <button id="copy">
+        <i class="ri-file-copy-line ri-lg"></i>
+      </button>
+    </div>
+    <div class="container col">
+      <div class="row">
+        <p>Character Length</p>
+        <span id="range-text">10</span>
+      </div>
+      <div class="range">
+        <input
+          type="range"
+          name="range"
+          id="range"
+          min="3"
+          max="30"
+          value="12"
+        />
+      </div>
+      <div class="checkbox-forms">
+        <label for="lowercase"
+          >Include lowercase letters
+          <input type="checkbox" name="checkbox" id="lowercase" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="checkbox-forms">
+        <label for="uppercase"
+          >Include uppercase letters
+          <input type="checkbox" name="checkbox" id="uppercase" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="checkbox-forms">
+        <label for="numbers"
+          >Include numbers
+          <input type="checkbox" name="checkbox" id="numbers" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="checkbox-forms">
+        <label for="symbols"
+          >Include symbols
+          <input type="checkbox" name="checkbox" id="symbols" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="row wrapper">
+        <p>Strength</p>
+        <div class="strength">
+          <p id="strength-text">WEAK</p>
+          <div class="strength-bar"></div>
+          <div class="strength-bar"></div>
+          <div class="strength-bar"></div>
+          <div class="strength-bar"></div>
+          <div class="strength-bar"></div>
+        </div>
+      </div>
+      <button>Generate <i class="ri-arrow-right-line"></i></button>
+    </div>
+  </body>
+</html>

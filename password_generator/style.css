@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1c1b25, #08070c);
+  font-size: 18px;
+  font-family: "Roboto Mono", monospace;
+  color: #f2f2f2;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 10px;
+  width: fit-content;
+  text-align: center;
+  padding: 12px;
+  letter-spacing: 4px;
+  border-bottom: 2px solid #9ffba8;
+}
+
+.container {
+  padding: 20px;
+  background: #24232b;
+  width: 60%;
+  max-width: 720px;
+  min-width: 300px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.col {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+input[type="text"] {
+  width: 100%;
+  color: rgba(159, 251, 168, 1);
+  font-size: 14px;
+  font-family: "Roboto Mono", monospace;
+  padding: 12px;
+  border: 0;
+  border-bottom: 2px solid #9ffba8;
+  outline: none;
+  background: linear-gradient(to right, #181a1b, #24232b);
+}
+
+::placeholder {
+  color: rgba(159, 251, 168, 0.85);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f2f2f2;
+  border: 2px solid #9ffba8;
+  outline: none;
+  cursor: pointer;
+
+  transition: all 0.4s;
+}
+
+button:active {
+  border: 2px solid #f2f2f2;
+}
+
+.row > button:hover {
+  opacity: 0.8;
+}
+
+.row > button {
+  width: 44px;
+  height: 44px;
+  background: #181a1b;
+}
+
+.range {
+  width: 100%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  background: #f2f2f2;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background: #0e0d13;
+  border-radius: 50%;
+  border: 2px solid #9ffba8;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  background: #0e0d13;
+  border-radius: 50%;
+  border: 2px solid #9ffba8;
+  cursor: pointer;
+}
+
+.row > span {
+  font-size: 24px;
+  padding: 4px 8px;
+  background-color: #0e0d13;
+  color: #9ffba8;
+}
+
+.checkbox-forms {
+  align-self: start;
+}
+
+.checkbox-forms > label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-forms > label:hover input ~ .checkmark {
+  border: 1px solid #9ffba8;
+  background-color: #0b0a10;
+}
+
+.checkbox-forms > label input:checked ~ .checkmark {
+  background-color: #0e0d13;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #1c1d20;
+  background-color: #1c1d20;
+  transition: all 0.4s;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-forms > label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-forms > label .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 3px;
+  height: 6px;
+  /* height: 7px? */
+  border: solid #9ffba8;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.wrapper {
+  width: 100%;
+  padding: 20px;
+  background: #18171f;
+}
+
+.wrapper > p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.strength {
+  display: flex;
+  flex-flow: row;
+  gap: 6px;
+}
+
+.strength > p {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.strength-bar {
+  width: 10px;
+  border: 1px solid #9ffba8;
+}
+
+.col > button {
+  width: 100%;
+  background: transparent;
+  padding: 12px;
+  font-size: 18px;
+  font-family: "Roboto Mono", monospace;
+  color: #1c1b25;
+  gap: 12px;
+  background: #9ffba8;
+}
+
+.col > button:hover {
+  color: #f2f2f2;
+  background: transparent;
+}

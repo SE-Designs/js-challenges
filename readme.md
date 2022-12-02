@@ -12,5 +12,4 @@
 - [ ] Movie releases website
 - [ ] Password generator app
 - [ ] In-browser markdown editor
-- [ ] Maker pre-launch landing page
-- [ ] Interactive card details form
+- [x] Interactive card details form
