@@ -127,6 +127,18 @@ function changeDifficulty() {
   }
 }
 
+copy.addEventListener("click", () => {
+  copying();
+});
+
+const copying = async () => {
+  try {
+    await navigator.clipboard.writeText(result.value);
+  } catch (err) {
+    console.error("Failed to copy: ", err);
+  }
+};
+
 function generateLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }

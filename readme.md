@@ -10,6 +10,6 @@
 - [ ] Devjobs website
 - [ ] Pomodoro advanced app
 - [ ] Movie releases website
-- [ ] Password generator app
+- [x] Password generator app
 - [ ] In-browser markdown editor
 - [x] Interactive card details form
