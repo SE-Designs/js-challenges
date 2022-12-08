@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+		<script defer src="app.js"></script>
+		<title>My Markdown Editor</title>
+	</head>
+	<body>
+		<h1>Markdown Editor</h1>
+		<div class="top-bar">
+			<h2>using showdown js:</h2>
+		</div>
+		<main>
+			<div class="main-content">
+				<textarea
+					class="text-editor"
+					name="text-editor"
+					id="text-editor"
+					cols="20"
+					rows="20"
+					autofocus
+					autocomplete="off"
+					spellcheck="false"
+				></textarea>
+			</div>
+			<div class="preview-content" id="preview-content"></div>
+		</main>
+	</body>
+</html>

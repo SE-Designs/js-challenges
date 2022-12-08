@@ -1,0 +1,66 @@
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 16px;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	color: #f1f1f1;
+	background: #353535;
+	font-family: "Raleway", sans-serif;
+}
+.top-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+main {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.main-content {
+	flex: 1;
+	height: 100%;
+	border: 1px solid #010101;
+}
+
+.text-editor {
+	width: 100%;
+	height: 100%;
+	padding: 30px;
+	border: 0;
+	outline: none;
+	appearance: none;
+	resize: none;
+	font-family: "Space Mono", monospace;
+}
+
+.preview-content {
+	flex: 1;
+	padding: 30px;
+	border: 1px solid #010101;
+	font-family: "Space Mono", monospace;
+}
+
+a {
+	color: aqua;
+}
