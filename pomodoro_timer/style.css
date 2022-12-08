@@ -1,39 +1,92 @@
 body {
-  min-height: 100vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(#06061d, #1c2371);
-  color: #f1f1f1;
+	min-height: 100vh;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	background: radial-gradient(#06061d, #1c2371);
+	color: #f1f1f1;
 }
 
 body.standard {
-  font-family: "Poppins", sans-serif;
+	font-family: "Poppins", sans-serif;
 }
 
 body.primary {
-  font-family: "Raleway", sans-serif;
+	font-family: "Raleway", sans-serif;
 }
 
 body.secondary {
-  font-family: "Playfair Display", serif;
+	font-family: "Playfair Display", serif;
 }
 
 h1 {
-  margin-bottom: 40px;
+	margin-bottom: 40px;
 }
 
 .timer {
-  background: rgba(236, 236, 236, 0.1);
-  min-width: 500px;
-  min-height: 500px;
-  border-radius: 50%;
-  box-shadow: inset 0 0 80px rgba(236, 236, 236, 0.9),
-    0 0 80px rgba(0, 0, 0, 0.8);
-  border: 4px solid rgba(255, 255, 255, 0.9);
+	position: relative;
+	/* background: rgba(236, 236, 236, 0.1); */
+	min-width: 500px;
+	min-height: 500px;
+	border-radius: 50%;
+	/* box-shadow: inset 0 0 80px rgba(236, 236, 236, 0.9), */
+	/* 0 0 80px rgba(0, 0, 0, 0.8); */
+	/* border: 4px solid rgba(255, 255, 255, 0.9); */
+}
+
+.time {
+	letter-spacing: 2px;
+	font-weight: 700;
+	font-size: 32px;
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+svg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 508px;
+	height: 508px;
+}
+
+svg circle {
+	stroke-dasharray: 1560px;
+	stroke-dashoffset: 0px;
+	stroke-linecap: round;
+
+	fill: none;
+	transform-origin: center;
+	transform: rotate(-90deg);
+}
+
+#minutes circle {
+	stroke-width: 12px;
+	stroke: #dbdce3;
+}
+
+#seconds circle {
+	stroke-width: 8px;
+	stroke: #1c1cbb;
+	animation: countdown 60s linear infinite forwards;
+}
+
+@keyframes countdown {
+	from {
+		stroke-dashoffset: 0px;
+	}
+	to {
+		stroke-dashoffset: 1560px;
+	}
 }
